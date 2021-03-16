@@ -3,7 +3,13 @@
 //Date:       3/15/2021
 //Purpose:    The template for all of the non-class functions
 
-void generate_dungeon(dungeon dung)
+#include "header.h"
+#include<iostream>
+using namespace std;
+
+void generate_dungeon(dungeon &dung)
 {
+  //Get user settings for said dungeon
+  dung.generate();
   return;
 }

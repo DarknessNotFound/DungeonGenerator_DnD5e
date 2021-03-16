@@ -3,8 +3,8 @@
 // Date:       2/1/2021
 // Purpose:    This is going to house the main loop for the overall program.
 //	       This will also include the basic text output for the end user.
-#include<iostream>
-#include"header.h"
+#include <iostream>
+#include "header.h"
 using namespace std;
 
 int main()
@@ -13,9 +13,9 @@ int main()
   bool cont_progr = true; //Continue the current program
   string menu_displ = "\t\tMenu\n" //Holds menu display
 		      "1. New Generation\n"
-		      "2. Display Current Generation"
-		      "3. Settings"
-		      "4. Quit";
+		      "2. Display Current Generation\n"
+		      "3. Settings\n"
+		      "4. Quit\n";
   short menu_choice;				
   do
   {
@@ -29,6 +29,7 @@ int main()
 	generate_dungeon(dung1);
         break;
       case 2: //Display Current Generation
+        dung1.print_dung_data();
 	break;
       case 3: //Settings
 	break;
