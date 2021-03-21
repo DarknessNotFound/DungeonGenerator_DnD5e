@@ -4,7 +4,7 @@
 //Purpose:    The template for all of the non-class functions
 
 #include "header.h"
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 void generate_dungeon(dungeon &dung)

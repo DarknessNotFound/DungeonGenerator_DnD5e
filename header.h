@@ -9,14 +9,21 @@
 
 
 const short SQ_TO_FEET = 5; //Conversion rate between squares and feet
+struct point
+{
+  short x;
+  short y;
+};
 
 struct room
 { 
   short m_length;
   short m_width;
   short m_num_exits;
-  short m_start_x;//Lower left corner
-  short m_start_y; 
+  point m_low_l;
+  point m_low_r;
+  point m_upp_l;
+  point m_upp_r;
 };
 
 class dungeon
