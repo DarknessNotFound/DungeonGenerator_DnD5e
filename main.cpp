@@ -13,9 +13,10 @@ int main()
   bool cont_progr = true; //Continue the current program
   string menu_displ = "\t\tMenu\n" //Holds menu display
 		      "1. New Generation\n"
-		      "2. Display Current Generation\n"
+		      "2. Display Dungeon\n"
 		      "3. Settings\n"
-		      "4. Quit\n";
+		      "4. Quit\n"
+                      "5. Output Dungeon Stuff\n";
   short menu_choice;				
   do
   {
@@ -29,13 +30,17 @@ int main()
 	generate_dungeon(dung1);
         break;
       case 2: //Display Current Generation
-        dung1.print_dung_data();
+        dung1.print_dung();
 	break;
       case 3: //Settings
 	break;
       case 4: //Quit
 	cout << "Thanks for using the dungeon generator! Bye!" << endl;
   	cont_progr = false;
+	break;
+      case 5:
+	dung1.print_dung_data();
+	break;
     }
   } while (cont_progr);
   return 0;
